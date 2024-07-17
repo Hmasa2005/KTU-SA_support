@@ -19,6 +19,7 @@
         </form>
         <div id="result"></div>
     </div>
+    <footer>Made by Masahiro Higuchi.</footer>
 
     <script>
         const items = [
@@ -28,7 +29,7 @@
             "【設備】DVD本体", "【設備】VHS本体", "【設備】PC本体", "【設備】CDカセットプレイヤー",
             "【設備】教卓全体", "【設備】操作盤", "【設備】操作盤ポート部分①", "【設備】操作盤ポート部分②",
             "【機器】OHC", "【機器】OHCボタン部分", "【機器】OHC側面", "【機器】マウス①",
-            "【機器】マウス②", "【機器】キーボード①", "【機器】キーボード②", "【機器】卓上モニター",
+            "【機器】マウス②", " "【機器】キーボード①", "【機器】キーボード②", "【機器】卓上モニター",
             "【機器】ワイヤレスマイク①", "【機器】ワイヤレスマイク②", "【機器】ワイヤレスマイク③", "【機器】ワイヤレスマイク④",
             "【機器】ワイヤレスピンマイク①", "【機器】ワイヤレスピンマイク②", "【機器】マイク充電スタンド", "【機器】プロジェクター①",
             "【機器】プロジェクター①レンズ部", "【機器】プロジェクター①下部", "【機器】プロジェクター①側面1", "【機器】プロジェクター①側面2",
@@ -88,18 +89,5 @@
             const zip = new JSZip();
             const folder = zip.folder(classroomName);
 
-            files.forEach(({ file, label }) => {
-                const newFileName = `${classroomName}${label}${file.name.substring(file.name.lastIndexOf('.'))}`;
-                folder.file(newFileName, file);
-            });
+            files.forEach(({ file
 
-            zip.generateAsync({ type: 'blob' }).then(function(content) {
-                saveAs(content, `${classroomName}.zip`);
-                document.getElementById('result').innerHTML = 'ファイルがダウンロードされました。';
-            });
-        }
-
-        window.onload = createPhotoSections;
-    </script>
-</body>
-</html>
