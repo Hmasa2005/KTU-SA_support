@@ -59,3 +59,12 @@ button:hover {
 .photo-section {
     margin-bottom: 30px; /* Increased margin for more spacing */
 }
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    font-size: 0.9em;
+    color: #555;
+}
