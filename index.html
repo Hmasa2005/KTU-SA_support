@@ -87,7 +87,8 @@
             }).filter(entry => entry.file !== undefined);
 
             if (files.length === 0) {
-                document.getElementById('result').innerHTML = '少なくとも1つの写真をアップロードしてください。';
+                // document.getElementById('result').innerHTML = '少なくとも1つの写真をアップロードしてください。';
+                alert("少なくとも1つの写真をアップロードしてください。");
                 return;
             }
 
@@ -101,7 +102,8 @@
 
             zip.generateAsync({ type: 'blob' }).then(function(content) {
                 saveAs(content, `${classroomName}.zip`);
-                document.getElementById('result').innerHTML = 'ファイルがダウンロードされました。';
+                // document.getElementById('result').innerHTML = 'ファイルがダウンロードされました。';
+                alert("ファイルの処理が完了しました。ダウンロードされたZIPファイルを解凍して指定されたUSBに移動させて下さい。");
             });
         }
 
