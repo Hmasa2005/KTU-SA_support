@@ -38,33 +38,20 @@ button {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #4CAF50;
+    background-color: #007BFF;
     color: white;
     border: none;
-    cursor: pointer;
     margin-top: 20px;
+    cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
-}
-
-#result {
-    margin-top: 20px;
-    background: #e7f3fe;
-    padding: 10px;
-    border: 1px solid #b3d7ff;
-}
-
-.photo-section {
-    margin-bottom: 30px; /* Increased margin for more spacing */
+    background-color: #0056b3;
 }
 
 footer {
     text-align: center;
     margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #ccc;
-    font-size: 0.9em;
-    color: #555;
+    font-size: 14px;
+    color: #666;
 }

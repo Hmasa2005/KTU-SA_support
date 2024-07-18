@@ -11,8 +11,6 @@
 <body>
     <div class="container">
         <h1>教室ごとの写真撮影アプリ</h1>
-        <label>Made by Masahiro Higuchi.</label>
-        <h1></h1>
         <form id="photoForm">
             <label for="classroomName">教室名:</label>
             <input type="text" id="classroomName" name="classroomName" required>
@@ -21,7 +19,7 @@
         </form>
         <div id="result"></div>
     </div>
-    
+    <footer>Made by Masahiro Higuchi.</footer>
 
     <script>
         const items = [
@@ -77,6 +75,11 @@
 
         function handleDownload() {
             const classroomName = document.getElementById('classroomName').value;
+
+            if (!classroomName) {
+                alert("教室名を入力してください。");
+                return;
+            }
 
             const files = items.map(item => {
                 const fileInput = document.getElementById(item);
